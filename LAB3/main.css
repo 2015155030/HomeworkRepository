@@ -1,0 +1,110 @@
+/* main.css*/
+/* External style shhet */
+h1 {font-family: Arial, Helvetica, sans-serif; 
+    font-size: 200%;
+    text-align: center;
+    width: 700px;
+    height: 40px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+    padding: 10px 1px 10px 1px;
+    margin: auto;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    color: rgb(0, 0, 0);  }
+
+.input {font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    font-size: 15px; 
+    text-align: center;
+    width: 700px;
+    height: auto;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+    padding: 10px 1px 10px 1px;
+    margin: auto;
+    background-image: linear-gradient(to top left,
+    rgba(0, 0, 0, .2),
+    rgba(0, 0, 0, .2) 30%,
+    rgba(0, 0, 0, 0));
+} 
+
+.loginput {font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    font-size: 15px; 
+    text-align: center;
+    width: 700px;
+    height: auto;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+    padding: 40px 1px 40px 1px;
+    margin: auto;
+    background-image: linear-gradient(to top left,
+    rgba(0, 0, 0, .2),
+    rgba(0, 0, 0, .2) 30%,
+    rgba(0, 0, 0, 0));
+}
+.button{
+    padding: 10px 1px 10px 1px;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+    height: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}
+.redirection{
+    padding: 10px 1px 10px 1px;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+    height: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}  
+
+/*마켓재키*/
+.move{
+    animation-name: movingPara;
+    animation-duration: 2s;                             
+}
+
+@keyframes movingPara {
+    0% {margin-left: 100%;}
+    
+    
+    
+    100% {margin-left: 0%}
+}
+
+.redirection2 {margin-top: 10px;}
+a {color:black; text-decoration-line:none;}
+.wrap1 {width: 1020px; height:auto;  margin: auto;}
+.wrap2 {width: 1020px; margin:auto;}
+.wrap3 {width: 1020px; margin:auto;}
+.item1 {float:left; width: 400px; height: 400px; border: 1px solid black;   margin-top: 10px; margin-right: 5px;}
+.item2 {float:left; width: 400px; height: 400px; border: 1px solid black; margin-top: 10px;}
+#panda {width: 100px; height: 100px; transition: width 2s, height 2s;}
+#panda:hover{ width: 400px; height: 400px;}
+#dinosaur{ width: 100px; height: 100px; transition: width 2s, height 2s;}
+#dinosaur:hover{ width: 400px; height: 400px;}
+#columnhead{clear:left;}
+#column {clear:left; margin-top: 10px; column-count: 2; column-gap: 30px; column-width: 100px; column-rule-style: solid; column-rule-width: 1px; }
+
