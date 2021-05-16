@@ -1,0 +1,81 @@
+/* main.css*/
+/* External style shhet */
+h1 {font-family: Arial, Helvetica, sans-serif; 
+    font-size: 200%;
+    text-align: center;
+    width: 700px;
+    height: 40px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    padding: 10px 1px 10px 1px;
+    margin: 20px 20px 20px 20px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    color: rgb(0, 0, 0);  }
+body {background-color: rgb(236, 248, 234);}
+.input {font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    font-size: 15px; 
+    text-align: center;
+    width: 700px;
+    height: auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    padding: 10px 1px 10px 1px;
+    margin: 20px 20px 20px 20px;
+    background-image: linear-gradient(to top left,
+    rgba(0, 0, 0, .2),
+    rgba(0, 0, 0, .2) 30%,
+    rgba(0, 0, 0, 0));
+} 
+
+.loginput {font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    font-size: 15px; 
+    text-align: center;
+    width: 700px;
+    height: auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    padding: 40px 1px 40px 1px;
+    margin: 20px 20px 20px 20px;
+    background-image: linear-gradient(to top left,
+    rgba(0, 0, 0, .2),
+    rgba(0, 0, 0, .2) 30%,
+    rgba(0, 0, 0, 0));
+}
+.button{
+    padding: 10px 1px 10px 1px;
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+    width: 700px;
+    height: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}
+.redirection{
+    padding: 10px 1px 10px 1px;
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+    width: 700px;
+    height: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}    
