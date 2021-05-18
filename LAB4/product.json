@@ -1,0 +1,128 @@
+[
+    {
+        "name": "bimo card",
+        "price": 0.60,
+        "image": "bimo card.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "bimo cushion",
+        "price": 2.50,
+        "image": "bimo cushion.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "bimo keyring",
+        "price": 0.45,
+        "image": "bimo keyring.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "bimo notebookpouch",
+        "price": 1.65,
+        "image": "bimo notebookpouch.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "bimo sliper",
+        "price": 1.20,
+        "image": "bimo sliper.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "bimo sticker",
+        "price": 0.25,
+        "image": "bimo sticker.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "bimo tripbag",
+        "price": 8.50,
+        "image": "bimo tripbag.jpg",
+        "type": "bimo"
+    },
+    {
+        "name": "boby",
+        "price": 1.50,
+        "image": "boby.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "bonobono",
+        "price": 1.50,
+        "image": "bonobono.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "bumblebee",
+        "price": 1.50,
+        "image": "bumblebee.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "chucky",
+        "price": 1.99,
+        "image": "chucky.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "dragon",
+        "price": 1.99,
+        "image": "dragon.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "kermit",
+        "price": 1.65,
+        "image": "kermit.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "nezko",
+        "price": 7.66,
+        "image": "nezko.jpg",
+        "type": "figure"
+    },
+    {
+        "name": "omegamon",
+        "price": 10.50,
+        "image": "omegamon.jpg",
+        "type": "figure"
+    },
+    {
+        "name": "pony",
+        "price": 1.25,
+        "image": "pony.jpg",
+        "type": "doll"
+    },
+    {
+        "name": "ramn",
+        "price": 12.99,
+        "image": "ram.jpg",
+        "type": "figure"
+    },
+    {
+        "name": "sagiri",
+        "price": 10.50,
+        "image": "sagiri.jpg",
+        "type": "figure"
+    },
+    {
+        "name": "spiderman",
+        "price": 8.70,
+        "image": "spiderman.jpg",
+        "type": "figure"
+    },
+    {
+        "name": "uouzi",
+        "price": 11.50,
+        "image": "uouzi.jpg",
+        "type": "figure"
+    },
+    {
+        "name": "ziantpang",
+        "price": 2.50,
+        "image": "ziantpang.jpg",
+        "type": "figure"
+    }
+]
