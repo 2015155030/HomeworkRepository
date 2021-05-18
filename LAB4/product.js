@@ -185,10 +185,10 @@ fetch('product.json').then(function(response) {
       // Give the <button> a content
       explaination.textContent = "클릭해보세요"; 
 
-      function inputChange(){
-        section.appendChild(heading);
-        section.appendChild(para);
-      }
+      //function inputChange(){
+      //  section.appendChild(heading);
+       // section.appendChild(para);
+      //}
       
       explaination.setAttribute('onclick', inputChange());
 
