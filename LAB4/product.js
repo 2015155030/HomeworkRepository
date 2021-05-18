@@ -164,6 +164,7 @@ fetch('product.json').then(function(response) {
       const heading = document.createElement('h2');
       const para = document.createElement('p');
       const image = document.createElement('img');
+      const explaination = document.createElement('p');
   
       // give the <section> a classname equal to the product "type" property so it will display the correct icon
       section.setAttribute('class', product.type);
@@ -180,11 +181,21 @@ fetch('product.json').then(function(response) {
       // Set the src of the <img> element to the ObjectURL, and the alt to the product "name" property
       image.src = objectURL;
       image.alt = product.name;
+
+      // Give the <p> a content
+      explaination.textContent = "클릭해보세요"; 
+      explaination.setAttribute('id', log);
+
+      let log = document.getElementById(log);
+      document.onclick = inputChange;
+
+      function inputChange(){
+        section.appendChild(heading);
+        section.appendChild(para);
+      }
   
       // append the elements to the DOM as appropriate, to add the product to the UI
       main.appendChild(section);
-      section.appendChild(heading);
-      section.appendChild(para);
       section.appendChild(image);
     }
   }
