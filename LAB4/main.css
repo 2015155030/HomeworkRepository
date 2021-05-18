@@ -143,6 +143,20 @@ html {
     height: 215px;
   }
   
+  section button {
+    z-index: 2000;
+    background: black;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 1px gray;
+    position: absolute;
+    left: 10px;
+    bottom: -6px;
+  }
+
   section img {
     width: 100%;
     display: block;
@@ -151,7 +165,7 @@ html {
   }
   
   section p {
-    color: yellow;
+    color: yellowgreen;
     background: black;
     width: 50px;
     height: 50px;
