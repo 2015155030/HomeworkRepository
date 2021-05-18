@@ -197,5 +197,6 @@ fetch('product.json').then(function(response) {
       // append the elements to the DOM as appropriate, to add the product to the UI
       main.appendChild(section);
       section.appendChild(image);
+      section.appendChild(explaination);
     }
   }
