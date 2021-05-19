@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PROGAMMINGSHOP</title>
+    <link rel="stylesheet" type="text/css" href="main2.css">
+</head>
+<body>
+
+<h1 title="welcome bro">HELLO! THIS IS PROGAMMINGSHOP!</h1>
+
+<div class="redirection">
+    <button type="button" onclick="location.href='https://2015155030.github.io/HomeworkRepository/LAB4/login.html' ">로그인하러가기</button>
+    <button type="button" onclick="location.href='https://2015155030.github.io/HomeworkRepository/LAB4/signup.html' ">가입하기</button>
+    <button type="button" onclick="location.href='https://2015155030.github.io/HomeworkRepository/LAB4/index.html' ">메인페이지</button> 
+</div>
+
+<div class="input">
+<form method = "post" action="/examples/media/request.php" autocomplete="on">
+    <label>숫자:
+        <input type="number" name="number" value="5" min="0" max="10" step=any >
+    </label>    
+    <label>시간:
+        <input type="time" name="sleepstart" value="00:00" min="21:00" max="06:00" step=any >
+    </label>    
+    <label>이름:
+            <input type="text" name="name" value="홍길동" autofocus >
+        </label>
+    <br><br>
+        <label>생년월일:
+            <input type="date" name="birthday">
+        </label>
+    <br><br>
+        <label>성별:
+            <input list="gender" name="gen" autocomplete="off">
+            <datalist id="gender">
+                <option value="남">
+                <option value="여">
+            </datalist>
+        </label>
+    <br><br>
+        <label>이메일:
+            <input type="email" name="email" placeholder="학번@yonsei.ac.kr"
+			pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" title="이메일 양식">
+        </label>
+    <br><br>
+        <label>유저 아이디:
+            <input type="text" name="username" placeholder="아이디를 입력하세요" required>(필수입력)
+        </label>
+    <br><br>
+        <label>비밀번호:
+            <input type="text" name="password" placeholder="비밀번호를 입력하세요"autocomplete="off">
+        </label>
+    <br><br>    
+        <label>비밀번호 확인:
+            <input type="text" name="password" placeholder="비밀번호를 입력하세요"autocomplete="off">
+        </label> 
+    <br><br>    
+    <label>개인정보 수집에 동의 하십니까?
+        <input type="checkbox" name="yes">
+        <label for="yes">네 동의 합니다.</label>
+        <input type="checkbox" name="no" checked>
+        <label for="no">아니요.</label>
+    </label>      
+    <br><br>     
+</div>
+<div class="button">
+    <form method = "post" action="/examples/media/request.php"></form>
+	<input type="submit" value="Signup">
+	<input type="reset" value="Cancel">
+ </div>
+</form>
+</body>
+</html>
