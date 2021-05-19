@@ -164,7 +164,7 @@ fetch('product.json').then(function(response) {
       const heading = document.createElement('h2');
       const para = document.createElement('p');
       const image = document.createElement('img');
-      const explaination = document.createElement('button');
+      const explaination = document.createElement('h3');
   
       // give the <section> a classname equal to the product "type" property so it will display the correct icon
       section.setAttribute('class', product.type);
