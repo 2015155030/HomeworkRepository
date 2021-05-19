@@ -190,7 +190,7 @@ fetch('product.json').then(function(response) {
         section.appendChild(para);
       }
       
-      explaination.setAttribute('onclick', inputChange());
+      explaination.onclick = inputChange;
 
       
   
