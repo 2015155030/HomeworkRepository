@@ -198,5 +198,12 @@ fetch('product.json').then(function(response) {
       main.appendChild(section);
       section.appendChild(image);
       section.appendChild(explaination);
+
+      $('.container').infiniteScroll({
+        // options
+        path: '.pagination__next',
+        append: '.product.type',
+        history: false,
+      });
     }
   }

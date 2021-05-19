@@ -166,7 +166,7 @@ html {
   
   section h3 {
     color: blue;
-    background: gray;
+    background: rgb(131, 127, 127, 0.5);
     width: 100px;
     height: 50px;
     text-align: center;
