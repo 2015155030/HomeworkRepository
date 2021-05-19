@@ -132,11 +132,26 @@ fetch('product.json').then(function(response) {
         main.appendChild(para);
       // for each product we want to display, pass its product object to fetchBlob()
       } else {
-        for(let i = 0; i < finalGroup.length; i++) {
+        for(let i = 0; i < 6; i++) {
           fetchBlob(finalGroup[i]);
         }
       }
     }
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+        if(finalGroup.length === 0) {
+          const para = document.createElement('p');
+          para.textContent = 'No results to display!';
+          main.appendChild(para);
+        // for each product we want to display, pass its product object to fetchBlob()
+        } else {
+          for(let i = 7; i < 12; i++) {
+            fetchBlob(finalGroup[i]);
+          }
+        }
+      }
+    })
   
     // fetchBlob uses fetch to retrieve the image for that product, and then sends the
     // resulting image display URL and product object on to showProduct() to finally
@@ -185,6 +200,7 @@ fetch('product.json').then(function(response) {
       // Give the <button> a content
       explaination.textContent = "클릭해보세요"; 
 
+      // Give onclick event
       function inputChange(){
         section.appendChild(heading);
         section.appendChild(para);
@@ -199,11 +215,6 @@ fetch('product.json').then(function(response) {
       section.appendChild(image);
       section.appendChild(explaination);
 
-      $('.container').infiniteScroll({
-        // options
-        path: '.container',
-        append: '.product.type',
-        history: false,
-      });
+     
     }
   }
