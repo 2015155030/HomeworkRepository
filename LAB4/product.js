@@ -140,7 +140,7 @@ function initialize(products) {
   }
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight && category.value == 'all') {
       finalGroup = products;
       for (let i = 10; i < finalGroup.length; i++) {
         fetchBlob(finalGroup[i]);
