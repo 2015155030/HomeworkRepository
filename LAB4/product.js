@@ -201,7 +201,7 @@ fetch('product.json').then(function(response) {
 
       $('.container').infiniteScroll({
         // options
-        path: '.pagination__next',
+        path: '.container',
         append: '.product.type',
         history: false,
       });
