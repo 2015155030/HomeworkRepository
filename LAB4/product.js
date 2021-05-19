@@ -132,7 +132,7 @@ fetch('product.json').then(function(response) {
         main.appendChild(para);
       // for each product we want to display, pass its product object to fetchBlob()
       } else {
-        for(let i = 0; i < 6; i++) {
+        for(let i = 0; i < 9; i++) {
           fetchBlob(finalGroup[i]);
         }
       }
@@ -140,18 +140,13 @@ fetch('product.json').then(function(response) {
 
     window.addEventListener('scroll', () => {
       if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
-        if(finalGroup.length === 0) {
-          const para = document.createElement('p');
-          para.textContent = 'No results to display!';
-          main.appendChild(para);
-        // for each product we want to display, pass its product object to fetchBlob()
-        } else {
-          for(let i = 7; i < finalGroup.length; i++) {
+      
+          for(let i = 10; i < finalGroup.length; i++) {
             fetchBlob(finalGroup[i]);
           }
         }
       }
-    })
+    )
   
     // fetchBlob uses fetch to retrieve the image for that product, and then sends the
     // resulting image display URL and product object on to showProduct() to finally
