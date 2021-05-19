@@ -146,7 +146,7 @@ fetch('product.json').then(function(response) {
           main.appendChild(para);
         // for each product we want to display, pass its product object to fetchBlob()
         } else {
-          for(let i = 7; i < 12; i++) {
+          for(let i = 7; i < finalGroup.length; i++) {
             fetchBlob(finalGroup[i]);
           }
         }
