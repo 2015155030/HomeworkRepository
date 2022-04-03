@@ -187,6 +187,11 @@ header {
   .navbar {
     justify-content: space-between;
   }
+
+  .logo {
+    position: fixed;
+    margin: auto;
+  }
 }
 
 .sign__up {

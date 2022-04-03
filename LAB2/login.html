@@ -11,7 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/0cf5439b1f.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/0cf5439b1f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>LAB2</title>
   </head>
   <body>
@@ -42,7 +45,7 @@
       <main class="sign__up">
         <h2>Log in to With me</h2>
         <div class="formbox" id="formbox" style="width: 350px">
-          <form>
+          <form method="POST" action="http://www.example.com">
             <label for="email">Email Address</label>
             <input
               class="input__text"
@@ -55,7 +58,11 @@
           </form>
           <p class="forget__email">이메일 계정 찾기&rarr;</p>
         </div>
-        <div class="link__to">Don't have an account?&nbsp;<a href="signup.html">Create One &rarr;</a></div>
+        <div class="link__to">
+          Don't have an account?&nbsp;<a href="signup.html"
+            >Create One &rarr;</a
+          >
+        </div>
       </main>
     </div>
   </body>
@@ -68,7 +75,10 @@
 
       if (pw1 == '') return;
 
-      let isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1);
+      let isValidPassword =
+        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(
+          pw1
+        );
 
       if (!isValidPassword) {
         alertPassword1.style.display = 'block';
