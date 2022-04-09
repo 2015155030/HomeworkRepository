@@ -54,7 +54,6 @@ header {
   top: 0;
 
   z-index: 999;
-  border-bottom: 1px solid lightgray;
 }
 
 .navbar {
@@ -166,7 +165,7 @@ header {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1020px) {
   .navbar {
     justify-content: space-between;
   }
@@ -306,14 +305,27 @@ header {
   font-size: 18px;
 }
 
-.link__to a {
-  color: rgb(59 130 246/0.5);
-  font-weight: 100;
+.nav__bottom {
+  display: flex;
+  max-width: 1020px;
+  border-bottom: 0.5rem solid rgb(55 65 81);
+  margin: auto;
 }
 
-.link__to a:hover {
+.nav__bottom .links {
+  padding: 0.5rem;
+}
+
+.nav__bottom a {
+  font-size: 1.2rem;
+  padding-right: 0.25rem;
+  margin-left: 0.5rem;
+  color: rgb(55 65 81);
+}
+
+.nav__bottom a:hover {
   cursor: pointer;
-  opacity: 0.8;
+  border-bottom: 0.1rem solid red;
 }
 
 /* main page */
@@ -326,13 +338,18 @@ header {
 
   padding: 3rem;
   align-items: center;
-  width: 1020px;
+  width: 100%;
+  max-width: 1020px;
 }
 
-.index h2 {
+.index__first {
+  margin: 2.5rem 0 4rem 0;
+}
+
+.index__first h2 {
   text-align: center;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 3rem;
   line-height: 1;
   margin: 30px 0px;
   color: rgb(55 65 81);
@@ -340,9 +357,9 @@ header {
   text-shadow: rgb(0 0 0 / 10%) 2px 2px 4px;
 }
 
-.index p {
-  font-size: 18px;
-  line-height: 1.75em;
+.index__first p {
+  font-size: 1.2rem;
+  line-height: 1.75rem;
 
   text-align: center;
   color: rgb(55 65 81);
@@ -350,40 +367,100 @@ header {
   margin: 0;
 }
 
-.background__skewY {
+.index__second {
   background-color: rgb(55 65 81);
-  transform: skewY(-5deg);
-  height: 400px;
   width: 100%;
   margin-top: 50px;
+  display: flex;
+  max-width: 1020px;
+  margin: auto;
 }
 
-.background__skewY h2,
-h3 {
+.index__second h2 {
   color: white;
-  transform: skewY(5deg);
-  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
 }
 
-.background__skewY h2 {
-  font-size: 32px;
-  font-weight: 300;
-  margin-top: 1em;
-  margin-bottom: 0.25em;
+.index__second p {
+  color: white;
 }
 
-.background__skewY h3 {
-  font-size: 18px;
-  font-weight: 400;
+.course__title {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
-.background__noskew {
-  position: relative;
-  top: -250px;
-
+.navbar__index {
+  display: flex;
+  align-items: flex-start;
+  margin: auto;
+  max-width: 1020px;
+  flex-direction: column;
   background-color: rgb(55 65 81);
-  height: 400px;
-  width: 100%;
+}
+
+.navbar__index h1 {
+  position: relative;
   color: white;
-  text-align: center;
+  animation-duration: 2s;
+  animation-name: movingheader;
+
+  font-weight: lighter;
+  font-size: 1.5rem;
+  overflow: hidden;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+}
+
+.courses {
+  display: flex;
+  width: 100%;
+  height: 25rem;
+  max-width: 1020px;
+}
+
+.course {
+  width: 50%;
+  border: 0.25rem solid rgb(55 65 81);
+  box-sizing: border-box;
+}
+
+#panda {
+  width: 100px;
+  height: 100px;
+  transition: width 2s, height 2s;
+}
+#panda:hover {
+  width: 400px;
+  height: 400px;
+}
+
+#course1 {
+  transition: width 2s, height 2s;
+}
+
+#course1:hover {
+  width: 100%;
+  height: 100%;
+}
+
+#course2 {
+  transition: transform 2s;
+}
+
+#course2:hover {
+  transform: rotate(360deg);
+}
+
+@keyframes movingheader {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0.5rem;
+    width: 100%;
+  }
 }
