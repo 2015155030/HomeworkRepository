@@ -11,46 +11,58 @@
       href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/0cf5439b1f.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/0cf5439b1f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>LAB3</title>
   </head>
   <body>
     <div class="root">
       <header>
-        <nav class="navbar">
-          <div class="bar"><i class="fa-solid fa-bars"></i></div>
-          <div class="nav__left">
-            <div class="logo"><i class="fa-solid fa-cheese"></i></div>
-            <ul class="menu">
-              <li>Menu</li>
-              <li>Menu</li>
-              <li>Menu</li>
-            </ul>
-          </div>
-          <div class="nav__right">
-            <li class="active__btn"><a href="login.html">Login</a></li>
-            <li class="inactive__btn"><a href="signup.html">Sign up</a></li>
-          </div>
+        <nav class="navbar__index">
+          <h1>With Me 에서 코딩 마스터가 되세요!</h1>
         </nav>
-        <ul class="menu__drop__down">
-          <li>Menu</li>
-          <li>Menu</li>
-          <li>Menu</li>
-          <li>Menu</li>
-        </ul>
+        <div class="nav__bottom">
+          <div class="links">
+            <a href="login.html" id="stretch">Login</a>
+            <a href="signup.html" id="fromInsideOut">Sign up</a>
+          </div>
+        </div>
       </header>
       <main class="index">
-        <h2>Clone Startups. <br />Learn to code.</h2>
-        <p>
-          코딩은 진짜를 만들어보는거야! <br />
-          실제 서비스를 따라 만들면서 코딩을 배우세요.
-        </p>
-
-        <div class="background__skewY">
-          <h2>Featured Courses</h2>
-          <h3>최신 업데이트된 신상 강의</h3>
+        <div class="index__first">
+          <h2>Clone Startups. <br />Learn to code.</h2>
+          <p>
+            코딩은 진짜를 만들어보는거야! <br />
+            실제 서비스를 따라 만들면서 코딩을 배우세요.
+          </p>
         </div>
-        <div class="background__noskew">가나다라마바사</div>
+        <div class="index__second">
+          <div class="course__title">
+            <h2>Featured Courses</h2>
+          </div>
+        </div>
+        <div class="courses">
+          <div class="course">
+            <img
+              id="course1"
+              src="react.jpg"
+              width="200"
+              height="120"
+              alt="react"
+            />
+          </div>
+          <div class="course">
+            <img
+              id="course2"
+              src="clone.png"
+              width="250"
+              height="150"
+              alt="instagram"
+            />
+          </div>
+        </div>
       </main>
     </div>
   </body>
@@ -63,7 +75,10 @@
 
       if (pw1 == '') return;
 
-      let isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1);
+      let isValidPassword =
+        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(
+          pw1
+        );
 
       if (!isValidPassword) {
         alertPassword1.style.display = 'block';
