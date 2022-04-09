@@ -425,16 +425,9 @@ header {
   width: 50%;
   border: 0.25rem solid rgb(55 65 81);
   box-sizing: border-box;
-}
-
-#panda {
-  width: 100px;
-  height: 100px;
-  transition: width 2s, height 2s;
-}
-#panda:hover {
-  width: 400px;
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #course1 {
