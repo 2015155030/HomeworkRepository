@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/0cf5439b1f.js" crossorigin="anonymous"></script>
+    <title>LAB2</title>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <nav class="navbar">
+          <div class="bar"><i class="fa-solid fa-bars"></i></div>
+          <div class="nav__left">
+            <div class="logo"><a href="index.html"><bdi class="fa-solid fa-cheese"></i></a></div>
+            <ul class="menu">
+              <li>Menu</li>
+              <li>Menu</li>
+              <li>Menu</li>
+            </ul>
+          </div>
+          <div class="nav__right">
+            <li class="inactive__btn"><a href="login.html">Login</a></li>
+            <li class="active__btn">Sign up</a></li>
+          </div>
+        </nav>
+        <ul class="menu__drop__down">
+          <li>Menu</li>
+          <li>Menu</li>
+          <li>Menu</li>
+          <li>Menu</li>
+        </ul>
+      </header>
+      <main class="sign__up">
+        <h2>Sign up With me</h2>
+        <div class="formbox" id="formbox">
+          <form action="http://www.example.com" method="GET">
+            <label for="name">Name</label>
+            <input class="input__text" id="name" name="name" type="text" autofocus required />
+            <label for="password1">Password</label>
+            <!-- 영문 대소문자, 숫자, 특수문자를 꼭 포함하여 8~16자 -->
+            <input
+              class="input__text"
+              id="password1"
+              name="password1"
+              type="password"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"
+              required
+              onchange="test()"
+            />
+            <p class="valid__alert" id="valid__alert__password1">
+              비밀번호는 영문 대소문자, 숫자, 특수문자를 한개 이상씩 포함하여 8~16자 이어야 합니다
+            </p>
+            <label for="password2">Confirm Password</label>
+            <input
+              class="input__text"
+              id="password2"
+              name="password2"
+              type="password"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"
+              required
+              onchange="test()"
+            />
+            <p class="valid__alert" id="valid__alert__password2">비밀번호가 일치하지 않습니다.</p>
+            <label for="email">Email Address</label>
+            <input
+              class="input__text"
+              id="email"
+              name="email"
+              type="text"
+              placeholder="example@google.com"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <label for="birth">Birthday</label>
+            <div class="birthday__input">
+              <input
+                class="input__text"
+                id="birth__month"
+                name="birth__month"
+                type="number"
+                min="1"
+                max="12"
+                step="1"
+                placeholder="Month"
+              />
+              <input
+                class="input__text"
+                id="birth__day"
+                name="birth__day"
+                type="number"
+                min="1"
+                max="30"
+                step="1"
+                placeholder="Day"
+              />
+              <input
+                class="input__text"
+                id="birth__year"
+                name="birth__year"
+                type="number"
+                min="1950"
+                max="2022"
+                step="1"
+                placeholder="Year"
+              />
+            </div>
+
+            <p class="fav__language__p">Choose your favorite Programming language</p>
+
+            <div class="radio__inputs">
+              <div>
+                <input type="radio" id="c" name="fav_language" value="C" />
+                <label for="c">C</label>
+              </div>
+              <div>
+                <input type="radio" id="python" name="fav_language" value="Python" />
+                <label for="python">Python</label>
+              </div>
+              <div>
+                <input type="radio" id="java" name="fav_language" value="Java" />
+                <label for="java">Java</label>
+              </div>
+              <div>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+                <label for="javascript">JavaScript</label>
+              </div>
+            </div>
+            <div class="checkbox__inputs">
+              <div>
+                <input type="checkbox" id="consent1" name="consent1" required />
+                <label for="consent1"> I agree to the Terms & Conditions and Privacy Policy</label>
+              </div>
+              <div>
+                <input type="checkbox" id="consent2" name="consent2" />
+                <label for="consent2"> I agree to the Email Marketing Policy (optional)</label>
+              </div>
+            </div>
+            <input type="submit" class="input__btn" value="Create Account" />
+          </form>
+        </div>
+        <div class="link__to">Already have an account?&nbsp;<a href="login.html">Log in &rarr;</a></div>
+      </main>
+    </div>
+  </body>
+  <script>
+    const test = () => {
+      // 비밀번호 유효성 검사
+      let pw1 = document.getElementById('password1').value;
+      let alertPassword1 = document.getElementById('valid__alert__password1');
+      let alertPassword2 = document.getElementById('valid__alert__password2');
+
+      if (pw1 == '') return;
+
+      let isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1);
+
+      if (!isValidPassword) {
+        alertPassword1.style.display = 'block';
+      } else {
+        alertPassword1.style.display = 'none';
+      }
+
+      // 비밀번호 동일성 검사
+      let pw2 = document.getElementById('password2').value;
+      if (pw1 !== pw2) {
+        alertPassword2.style.display = 'block';
+      } else {
+        alertPassword2.style.display = 'none';
+      }
+    };
+  </script>
+</html>
