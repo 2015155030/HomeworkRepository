@@ -297,14 +297,6 @@ header {
   width: 28%;
 }
 
-.link__to {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5em;
-  font-size: 18px;
-}
-
 .nav__bottom {
   display: flex;
   max-width: 1020px;
@@ -344,6 +336,10 @@ header {
 }
 
 .index__first {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
   margin: 2.5rem 0 4rem 0;
 }
 
@@ -369,17 +365,17 @@ header {
 }
 
 .index__second {
-  background-color: rgb(55 65 81);
   width: 100%;
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
   max-width: 1020px;
   margin: auto;
 }
 
 .index__second h2 {
-  color: white;
-  font-size: 2rem;
+  color: rgb(55 65 81);
+  font-size: 1.5rem;
   font-weight: 200;
 }
 
@@ -390,7 +386,9 @@ header {
 .course__title {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.5rem;
+  border-top: 0.5rem solid rgb(55 65 81);
+  border-bottom: 0.25rem solid rgb(55 65 81);
 }
 
 .navbar__index {
@@ -417,13 +415,15 @@ header {
 
 .courses {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 25rem;
+  min-height: 15rem;
   max-width: 1020px;
 }
 
 .course {
-  width: 50%;
+  width: 25%;
+  max-width: 25%;
   border: 0.25rem solid rgb(55 65 81);
   box-sizing: border-box;
   display: flex;
@@ -448,6 +448,19 @@ header {
   transform: rotate(360deg);
 }
 
+.columns {
+  column-count: 2;
+  column-gap: 40px;
+  column-rule: 2px solid rgb(55 65 81);
+
+  border-bottom: 1px solid rgb(55 65 81);
+  padding: 1rem;
+}
+
+.columns p {
+  color: rgb(55 65 81);
+}
+
 @keyframes movingheader {
   from {
     margin-left: 100%;
@@ -456,5 +469,42 @@ header {
   to {
     margin-left: 0.5rem;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  .course__title h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .columns {
+    column-count: 1;
+  }
+
+  .columns div {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course {
+    width: 100%;
+    max-width: 100%;
   }
 }

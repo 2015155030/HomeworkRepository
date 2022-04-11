@@ -40,57 +40,69 @@
           <div class="course__title">
             <h2>Featured Courses</h2>
           </div>
-        </div>
-        <div class="courses">
-          <div class="course">
-            <img
-              id="course1"
-              src="react.jpg"
-              width="200"
-              height="120"
-              alt="react"
-            />
+          <div class="courses">
+            <div class="course">
+              <img
+                id="course1"
+                src="react.jpg"
+                width="125"
+                height="75"
+                alt="react"
+              />
+            </div>
+            <div class="course">
+              <img
+                id="course2"
+                src="clone.png"
+                width="125"
+                height="75"
+                alt="instagram"
+              />
+            </div>
+            <div class="course">
+              <img
+                id="course1"
+                src="youtube.png"
+                width="125"
+                height="75"
+                alt="youtube"
+              />
+            </div>
+            <div class="course">
+              <img
+                id="course2"
+                src="es6.jpg"
+                width="125"
+                height="75"
+                alt="react"
+              />
+            </div>
           </div>
-          <div class="course">
-            <img
-              id="course2"
-              src="clone.png"
-              width="250"
-              height="150"
-              alt="instagram"
-            />
+          <div class="course__title">
+            <h2>강의 소개</h2>
+          </div>
+          <div class="columns">
+            <div>
+              <h2>클론코딩 이란</h2>
+              <p>
+                실용성 100% 교육 방식 클론코딩은 인스타그램, 카카오톡, 유튜브
+                등등 실제 서비스를 따라 만들면서 배우는 공부 방식입니다. 실제
+                구현되어있는 서비스를 직접 내 손으로 한땀 한땀 따라 만들면서
+                배우는 것만큼 빠르고 효과적인 공부 방법은 없습니다.
+              </p>
+            </div>
+            <div>
+              <h2>무엇을 클론코딩 하나요?</h2>
+              <p>
+                유튜브 백엔드 + 프런트엔드 + 배포 기본적인 유튜브 기능을
+                충실하게 구현한 클론코딩 입니다. 유저들은 영상을 재생하고,
+                댓글을 달고, 검색할 수 있으며, 자기 자신의 비디오를 녹화하고
+                업로드 할 수 있어요
+              </p>
+            </div>
           </div>
         </div>
       </main>
     </div>
   </body>
-  <script>
-    const test = () => {
-      // 비밀번호 유효성 검사
-      let pw1 = document.getElaentById('password1').value;
-      let alertPassword1 = document.getElementById('valid__alert__password1');
-      let alertPassword2 = document.getElementById('valid__alert__password2');
-
-      if (pw1 == '') return;
-
-      let isValidPassword =
-        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(
-          pw1
-        );
-
-      if (!isValidPassword) {
-        alertPassword1.style.display = 'block';
-      } else {
-        alertPassword1.style.display = 'none';
-      }
-
-      // 비밀번호 동일성 검사
-      let pw2 = document.getElementById('password2').value;
-      if (pw1 !== pw2) {
-        alertPassword2.style.display = 'block';
-      } else {
-        alertPassword2.style.display = 'none';
-      }
-    };
-  </script>
 </html>
