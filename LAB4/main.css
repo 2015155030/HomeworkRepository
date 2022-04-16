@@ -299,6 +299,7 @@ header {
 
 .nav__bottom {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1020px;
   border-bottom: 0.5rem solid rgb(55 65 81);
   margin: auto;
