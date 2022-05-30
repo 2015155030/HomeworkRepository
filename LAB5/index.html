@@ -78,9 +78,14 @@
 
         newProduct.addEventListener('click', showDetail);
 
-        function showDetail(e) {
+        function showDetail() {
           const currProduct = document.getElementById(product.id);
-          currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+          if (currProduct.childNodes.length == 1) {
+            const detail = document.createElement('div');
+            detail.innerHTML = `${product.title}</br>난이도:${product.difficulty} </br>가격:${product.price}`;
+
+            currProduct.appendChild(detail);
+          }
         }
       });
     };
@@ -116,7 +121,12 @@
 
           function showDetail(e) {
             const currProduct = document.getElementById(product.id);
-            currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+            if (currProduct.childNodes.length == 1) {
+              const detail = document.createElement('div');
+              detail.innerHTML = `${product.title}</br>난이도:${product.difficulty} </br>가격:${product.price}`;
+
+              currProduct.appendChild(detail);
+            }
           }
         });
 
@@ -162,7 +172,12 @@
 
         function showDetail(e) {
           const currProduct = document.getElementById(product.id);
-          currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+          if (currProduct.childNodes.length == 1) {
+            const detail = document.createElement('div');
+            detail.innerHTML = `${product.title}</br>난이도:${product.difficulty} </br>가격:${product.price}`;
+
+            currProduct.appendChild(detail);
+          }
         }
       });
     };
