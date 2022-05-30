@@ -44,7 +44,7 @@
             <div class="fillter">
               난이도 별로 보기
               <select id="fillter" onchange="filltering(this)">
-                <option value="">난이도</option>
+                <option value="All" selected>All</option>
                 <option value="easy">easy</option>
                 <option value="middle">middle</option>
                 <option value="hard">hard</option>
@@ -60,32 +60,36 @@
     let myProducts = [];
     let state = 6;
     // first fetch
+    const initialFetch = (products) => {
+      products.slice(0, 6).forEach((product) => {
+        const newProduct = document.createElement('div');
+        newProduct.className = 'course';
+        newProduct.setAttribute('id', product.id);
+
+        const newImg = document.createElement('img');
+        newImg.setAttribute('src', product.src);
+        newImg.setAttribute('width', '175');
+        newImg.setAttribute('heigth', '75');
+        newImg.setAttribute('alt', product.title);
+        newProduct.appendChild(newImg);
+
+        const parentDiv = document.querySelector('.courses');
+        parentDiv.appendChild(newProduct);
+
+        newProduct.addEventListener('click', showDetail);
+
+        function showDetail(e) {
+          const currProduct = document.getElementById(product.id);
+          currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+        }
+      });
+    };
+
     fetch('product.json')
       .then((res) => res.json())
       .then((products) => {
         myProducts = products;
-        products.slice(0, 6).forEach((product) => {
-          const newProduct = document.createElement('div');
-          newProduct.className = 'course';
-          newProduct.setAttribute('id', product.id);
-
-          const newImg = document.createElement('img');
-          newImg.setAttribute('src', product.src);
-          newImg.setAttribute('width', '175');
-          newImg.setAttribute('heigth', '75');
-          newImg.setAttribute('alt', product.title);
-          newProduct.appendChild(newImg);
-
-          const parentDiv = document.querySelector('.courses');
-          parentDiv.appendChild(newProduct);
-
-          newProduct.addEventListener('click', showDetail);
-
-          function showDetail(e) {
-            const currProduct = document.getElementById(product.id);
-            currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
-          }
-        });
+        initialFetch(myProducts);
       });
 
     window.onscroll = () => {
@@ -97,9 +101,6 @@
           const newProduct = document.createElement('div');
           newProduct.className = 'course';
           newProduct.setAttribute('id', product.id);
-
-          // const newText = document.createTextNode(product.title);
-          // newProduct.appendChild(newText);
 
           const newImg = document.createElement('img');
           newImg.setAttribute('src', product.src);
@@ -124,7 +125,12 @@
     };
 
     const filltering = (e) => {
-      if (e.value == '난이도') {
+      const parentDiv = document.querySelector('.courses');
+
+      if (e.value == 'All') {
+        parentDiv.innerHTML = '';
+        initialFetch(myProducts);
+        state = 6;
         return;
       }
 
@@ -135,16 +141,12 @@
         }
       });
 
-      const parentDiv = document.querySelector('.courses');
       parentDiv.innerHTML = '';
 
       fillteredProducts.forEach((product) => {
         const newProduct = document.createElement('div');
         newProduct.className = 'course';
         newProduct.setAttribute('id', product.id);
-
-        // const newText = document.createTextNode(product.title);
-        // newProduct.appendChild(newText);
 
         const newImg = document.createElement('img');
         newImg.setAttribute('src', product.src);
