@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cf5439b1f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>LAB3</title>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <nav class="navbar__index">
+          <h1>With Me 에서 코딩 마스터가 되세요!</h1>
+        </nav>
+        <div class="nav__bottom">
+          <a href="login.html" id="stretch">Login</a>
+          <a href="signup.html" id="fromInsideOut">Sign up</a>
+        </div>
+      </header>
+      <main class="index">
+        <div class="index__first">
+          <h2>Clone Startups. <br />Learn to code.</h2>
+          <p>
+            코딩은 진짜를 만들어보는거야! <br />
+            실제 서비스를 따라 만들면서 코딩을 배우세요.
+          </p>
+        </div>
+        <div class="index__second">
+          <div class="course__title">
+            <h2>Featured Courses</h2>
+          </div>
+          <div class="row">
+            <div class="fillter">
+              난이도 별로 보기
+              <select id="fillter" onchange="filltering(this)">
+                <option value="">난이도</option>
+                <option value="easy">easy</option>
+                <option value="middle">middle</option>
+                <option value="hard">hard</option>
+              </select>
+            </div>
+            <div class="courses"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    let myProducts = [];
+    let state = 6;
+    // first fetch
+    fetch('product.json')
+      .then((res) => res.json())
+      .then((products) => {
+        myProducts = products;
+        products.slice(0, 6).forEach((product) => {
+          const newProduct = document.createElement('div');
+          newProduct.className = 'course';
+          newProduct.setAttribute('id', product.id);
+
+          const newImg = document.createElement('img');
+          newImg.setAttribute('src', product.src);
+          newImg.setAttribute('width', '175');
+          newImg.setAttribute('heigth', '75');
+          newImg.setAttribute('alt', product.title);
+          newProduct.appendChild(newImg);
+
+          const parentDiv = document.querySelector('.courses');
+          parentDiv.appendChild(newProduct);
+
+          newProduct.addEventListener('click', showDetail);
+
+          function showDetail(e) {
+            const currProduct = document.getElementById(product.id);
+            currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+          }
+        });
+      });
+
+    window.onscroll = () => {
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight &&
+        state <= myProducts.length
+      ) {
+        myProducts.slice(state, state + 6).forEach((product) => {
+          const newProduct = document.createElement('div');
+          newProduct.className = 'course';
+          newProduct.setAttribute('id', product.id);
+
+          // const newText = document.createTextNode(product.title);
+          // newProduct.appendChild(newText);
+
+          const newImg = document.createElement('img');
+          newImg.setAttribute('src', product.src);
+          newImg.setAttribute('width', '175');
+          newImg.setAttribute('heigth', '75');
+          newImg.setAttribute('alt', product.title);
+          newProduct.appendChild(newImg);
+
+          const parentDiv = document.querySelector('.courses');
+          parentDiv.appendChild(newProduct);
+
+          newProduct.addEventListener('click', showDetail);
+
+          function showDetail(e) {
+            const currProduct = document.getElementById(product.id);
+            currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+          }
+        });
+
+        state += 6;
+      }
+    };
+
+    const filltering = (e) => {
+      if (e.value == '난이도') {
+        return;
+      }
+
+      let fillteredProducts = [];
+      myProducts.forEach((p) => {
+        if (p.difficulty == e.value) {
+          fillteredProducts.push(p);
+        }
+      });
+
+      const parentDiv = document.querySelector('.courses');
+      parentDiv.innerHTML = '';
+
+      fillteredProducts.forEach((product) => {
+        const newProduct = document.createElement('div');
+        newProduct.className = 'course';
+        newProduct.setAttribute('id', product.id);
+
+        // const newText = document.createTextNode(product.title);
+        // newProduct.appendChild(newText);
+
+        const newImg = document.createElement('img');
+        newImg.setAttribute('src', product.src);
+        newImg.setAttribute('width', '175');
+        newImg.setAttribute('heigth', '75');
+        newImg.setAttribute('alt', product.title);
+        newProduct.appendChild(newImg);
+
+        const parentDiv = document.querySelector('.courses');
+        parentDiv.appendChild(newProduct);
+
+        newProduct.addEventListener('click', showDetail);
+
+        function showDetail(e) {
+          const currProduct = document.getElementById(product.id);
+          currProduct.innerHTML = `${product.title} 난이도:${product.difficulty} 가격:${product.price}`;
+        }
+      });
+    };
+  </script>
+</html>
