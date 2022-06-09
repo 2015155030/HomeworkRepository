@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cf5439b1f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>LAB3</title>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <nav class="navbar__index">
+          <h1>With Me 에서 코딩 마스터가 되세요!</h1>
+        </nav>
+        <div class="nav__bottom">
+          <a href="/login" id="stretch">Login</a>
+          <a href="/signup" id="fromInsideOut">Sign up</a>
+        </div>
+      </header>
+      <main class="index">
+        <div class="index__first">
+          <h2>Clone Startups. <br />Learn to code.</h2>
+          <p>
+            코딩은 진짜를 만들어보는거야! <br />
+            실제 서비스를 따라 만들면서 코딩을 배우세요.
+          </p>
+        </div>
+        <div class="index__second">
+          <div class="course__title">
+            <h2>Featured Courses</h2>
+          </div>
+          <div class="row">
+            <div class="fillter">
+              언어 별로 보기
+              <select id="fillter" onchange="filltering(this)">
+                <option value="javascript" selected>javascript</option>
+                <option value="react">react</option>
+                <option value="java">java</option>
+                <option value="python">python</option>
+                <option value="c++">c++</option>
+              </select>
+            </div>
+            <div class="courses">
+              <% for (const product of model) { %>
+              <div class="course" id="<%= product.product_id %>">
+                <%= product.product_title %>
+                <img
+                  src="../public/<%= product.product_image %>"
+                  width="175"
+                  height="75"
+                />
+                <div class="btnn">
+                  <a href="/product/<%= product.product_id %>"> 자세히보기 </a>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

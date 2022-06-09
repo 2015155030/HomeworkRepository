@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/0cf5439b1f.js" crossorigin="anonymous"></script>
+    <title>LAB2</title>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <nav class="navbar">
+          <div class="bar"><i class="fa-solid fa-bars"></i></div>
+          <div class="nav__left">
+            <div class="logo"><a href="/"><bdi class="fa-solid fa-cheese"></i></a></div>
+            <ul class="menu">
+              <li>Menu</li>
+              <li>Menu</li>
+              <li>Menu</li>
+            </ul>
+          </div>
+          <div class="nav__right">
+            <li class="active__btn">Login</li>
+            <li class="inactive__btn"><a href="/signup">Sign up</a></li>
+          </div>
+        </nav>
+        <ul class="menu__drop__down">
+          <li>Menu</li>
+          <li>Menu</li>
+          <li>Menu</li>
+          <li>Menu</li>
+        </ul>
+      </header>
+      <main class="sign__up">
+        <h2>Log in to With me</h2>
+        <div class="formbox" id="formbox" style="width: 280px">
+          <form>
+            <label for="email">Email Address</label>
+            <input
+              class="input__text"
+              id="email"
+              name="email"
+              type="text"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <input type="submit" class="input__btn" value="Continue" />
+          </form>
+          <p class="forget__email">이메일 계정 찾기&rarr;</p>
+        </div>
+        <div class="link__to">Don't have an account?&nbsp;<a href="signup.html">Create One &rarr;</a></div>
+      </main>
+    </div>
+  </body>
+  <script>
+    const test = () => {
+      // 비밀번호 유효성 검사
+      let pw1 = document.getElaentById('password1').value;
+      let alertPassword1 = document.getElementById('valid__alert__password1');
+      let alertPassword2 = document.getElementById('valid__alert__password2');
+
+      if (pw1 == '') return;
+
+      let isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1);
+
+      if (!isValidPassword) {
+        alertPassword1.style.display = 'block';
+      } else {
+        alertPassword1.style.display = 'none';
+      }
+
+      // 비밀번호 동일성 검사
+      let pw2 = document.getElementById('password2').value;
+      if (pw1 !== pw2) {
+        alertPassword2.style.display = 'block';
+      } else {
+        alertPassword2.style.display = 'none';
+      }
+    };
+  </script>
+</html>

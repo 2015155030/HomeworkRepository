@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Hind:wght@500&family=Hurricane&family=IBM+Plex+Sans+Arabic:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cf5439b1f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>LAB3</title>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <nav class="navbar__index">
+          <h1>With Me 에서 코딩 마스터가 되세요!</h1>
+        </nav>
+        <div class="nav__bottom">
+          <a href="/login" id="stretch">Login</a>
+          <a href="/signup" id="fromInsideOut">Sign up</a>
+        </div>
+      </header>
+      <main class="index">
+        <div class="index__second">
+          <div class="course__title">
+            <h2>Featured Courses</h2>
+          </div>
+          <div class="row">
+            <div class="coursess">
+              <img
+                src="../public/<%= model.product_image %>"
+                width="400"
+                height="300"
+              />
+              <div class="coursef" id="<%= model.product_id %>">
+                <h2>title : <%= model.product_title %></h2>
+                <h2>price : <%= model.product_price %></h2>
+                <h2>category : <%= model.product_category %></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
